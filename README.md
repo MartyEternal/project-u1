@@ -47,3 +47,7 @@ End user goal: Have a functional game that allows me to keep testing my ability 
 End business goal: Creation of memory game with multiple levels of scaling difficulty, bringing satisfaction in every win and to make the player strive to better their ability to memorize should they lose. 
 Acceptance criteria: Colour 'board' will project a sequence of colours and play corresponding tones/sounds without overlapping or crashing/getting stuck. The Play button will start the game state, beginning the memory game. The 'Next Level' button will start another round of the game but with higher difficulty. The UI will load properly regardless of what state the game is in.
 Measurement of success: 
+
+1. Have the page load to the initial game screen that has a preview of the colour 'board' with all colours lit up and the play button is visible and can be clicked/interacted with.
+
+2. 
