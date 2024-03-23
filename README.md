@@ -2,17 +2,17 @@ UNIT 1 Project - SEI
 Planning & Presentation Requirements
 Planning - Due: 06/04/2024
 You will share:
-- [] Your choice of game.
-- [] A wireframe of your "main" game screen.
-- [] Pseudocode for the overall game play.
-- [] User story
+- [x] Your choice of game.
+- [x] A wireframe of your "main" game screen.
+- [ ] Pseudocode for the overall game play.
+- [x] User story
 
 Necessary Deliverables
-- [] Your game's Title: Description of the game. Background info of the game.
-- [] Screenshots of the actual game.
-- [] Technologies Used: List of technologies, JS, HTML, CSS
-- [] Getting Started: Include link to your deployed game and instructions deemed important.
-- [] Next Steps: Planned future enhancements (icebox items)
+- [ ] Your game's Title: Description of the game. Background info of the game.
+- [ ] Screenshots of the actual game.
+- [ ] Technologies Used: List of technologies, JS, HTML, CSS
+- [ ] Getting Started: Include link to your deployed game and instructions deemed important.
+- [ ] Next Steps: Planned future enhancements (icebox items)
 
 My Choice of Game:
 I will be implementing my own spin on the classic game: Simon. 
