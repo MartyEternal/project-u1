@@ -2,17 +2,17 @@ UNIT 1 Project - SEI
 Planning & Presentation Requirements
 Planning - Due: 06/04/2024
 You will share:
-[x] Your choice of game.
-[x] A wireframe of your "main" game screen.
-[ ] Pseudocode for the overall game play.
-[x] User story
+- [] Your choice of game.
+- [] A wireframe of your "main" game screen.
+- [] Pseudocode for the overall game play.
+- [] User story
 
 Necessary Deliverables
-[ ] Your game's Title: Description of the game. Background info of the game.
-[ ] Screenshots of the actual game.
-[ ] Technologies Used: List of technologies, JS, HTML, CSS
-[ ] Getting Started: Include link to your deployed game and instructions deemed important.
-[ ] Next Steps: Planned future enhancements (icebox items)
+- [] Your game's Title: Description of the game. Background info of the game.
+- [] Screenshots of the actual game.
+- [] Technologies Used: List of technologies, JS, HTML, CSS
+- [] Getting Started: Include link to your deployed game and instructions deemed important.
+- [] Next Steps: Planned future enhancements (icebox items)
 
 My Choice of Game:
 I will be implementing my own spin on the classic game: Simon. 
@@ -36,20 +36,15 @@ Excalidraw Link:
 https://excalidraw.com/#json=BCK_yUeNFbDbkx5QU7_Tw,BGld4XX7d3Zvds-mTbvo9w
 
 Local Files:
-1. Initial State: Initial game screen as you open the page
-\home\marty\code\project-u1-personal\Wireframe\SIMON01INIT
+1. [Initial State: Initial game screen as you open the page](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Wireframe\SIMON01INIT)
 
-2. Play State: After clicking the Play button
-\home\marty\code\project-u1-personal\Wireframe\SIMON02PLAY
+2. [Play State: After clicking the Play button](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Wireframe\SIMON02PLAY)
 
-3. Game State: Game is running in full, colours are being sequenced and pushed to an array for player to try match in yet another array
-\home\marty\code\project-u1-personal\Wireframe\SIMON03GAME
+3. [Game State: Game is running in full, colours are being sequenced and pushed to an array for player to try match in yet another array](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Wireframe\SIMON03GAME)
 
-4. Win State: Player wins the game by matching all the colours/tones
-\home\marty\code\project-u1-personal\Wireframe\SIMON04WIN
+4. [Win State: Player wins the game by matching all the colours/tones](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Wireframe\SIMON04WIN)
 
-5. Lose State: Player loses the game at any point in the game
-\home\marty\code\project-u1-personal\Wireframe\SIMON05LOSE
+5. [Lose State: Player loses the game at any point in the game](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Wireframe\SIMON05LOSE)
 
 
 
