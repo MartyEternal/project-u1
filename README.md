@@ -42,6 +42,7 @@ Local Files:
 
 
 User Story:
+
 As a player, I want to be presented a memory game that makes use of bright colours and sounds so that I can have fun and exercise my ability to memorize sequences/patterns. 
 End user goal: Have a functional game that allows me to keep testing my ability to memorize. 
 End business goal: Creation of memory game with multiple levels of scaling difficulty, bringing satisfaction in every win and to make the player strive to better their ability to memorize should they lose. 
@@ -50,4 +51,11 @@ Measurement of success:
 
 1. Have the page load to the initial game screen that has a preview of the colour 'board' with all colours lit up and the play button is visible and can be clicked/interacted with.
 
-2. 
+2. Have the colour 'board' expand/enlarge when the play button has been clicked/interacted with. Have the play button disappear. Have the colour 'board' darken/grey out.
+
+3. Have the colour 'board' sections light up their colour in a random sequence.
+
+4. Have the player be able to click on the colour 'board' sections to answer the memory puzzle.
+
+5. Have the Win/Lose screen show depending on the result of the player's input. After the round ends, revert the size of the colour 'board' to what it was in the initial game screen. Have the Win screen show the 'Next Level' button in place of the play button. Have the Lose screen show the play button again.
+
