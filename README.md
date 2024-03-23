@@ -1,6 +1,6 @@
 UNIT 1 Project - SEI
 Planning & Presentation Requirements
-Planning - Due: 06/04/2024
+Planning - Due: 25/03/2024
 You will share:
 - [x] Your choice of game.
 - [x] A wireframe of your "main" game screen.
