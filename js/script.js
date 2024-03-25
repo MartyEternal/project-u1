@@ -1,21 +1,21 @@
-  /*----- constants -----*/
+/*----- constants -----*/
 const buttons = ["red", "yellow", "blue", "green"]
 const colorSequence = [];
 const playerSequence = [];
 
-  /*----- state variables -----*/
+/*----- state variables -----*/
 let level = 0;
 let playing = false;
 let header = document.querySelector("h1");
 
-  /*----- cached elements  -----*/
+/*----- cached elements  -----*/
 const gameButtons = document.querySelectorAll(".button");
 const gameStarter = document.getElementById("starter")
 
-  /*----- event listeners -----*/
+/*----- event listeners -----*/
 
 
-  /*----- functions -----*/
+/*----- functions -----*/
 function playGame() {
   if (!playing) {
     playing = true;
