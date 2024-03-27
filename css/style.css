@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    text-align: center;
 }
 
 #game-border {
@@ -23,7 +24,7 @@ body {
 }
 
 h1 {
-font-size: 50px;
+    font-size: 50px;
 }
 
 #game-main {
@@ -31,17 +32,23 @@ font-size: 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 400px; 
-    margin: 0px 0px 50px 0px;
+    max-width: 400px;
+    margin: 0px auto;
+    height: 100%;
 }
 
-.button {
+#game-board {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.color {
+    background-color: grey;
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    border: 5px solid rgb(0, 0, 0);
-    display: grid;
-    float: left;
+    border: 5px solid grey;
+    transition: background-color 0.3s;
 }
 
 #red {
@@ -80,8 +87,16 @@ font-size: 50px;
     border-color: green;
 }
 
-#starter {
+#start-button {
     width: 200px;
     height: 50px;
     margin: 50px 0px 50px 0px;
+}
+
+#message {
+    font-size: 100px;
+    position: absolute;
+    align-items: center;
+    max-width: 450px;
+    margin-bottom: 65px;
 }

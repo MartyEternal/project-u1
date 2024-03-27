@@ -12,14 +12,20 @@
     <div id="game-border">
         <div id="game-main">
             <h1>SIMON</h1>
-            <div id="board">
-                <div class="button" id="red"></div>
-                <div class="button" id="yellow"></div>
-                <div class="button" id="blue"></div>
-                <div class="button" id="green"></div>
+            <div id="message"></div>
+            <div id="game-board">
+                <div class="color" id="red"></div>
+                <div class="color" id="yellow"></div>
+                <div class="color" id="blue"></div>
+                <div class="color" id="green"></div>
             </div>
-            <button id="starter">PLAY GAME</button>
-            <p></p>
+            <button id="start-button">PLAY GAME</button>
+            
+            <p id="instructions">The player has to memorize the sequence of randomly generated colours by the Simon game, and reproduce it
+                in the right order. The aim is to reproduce the longest series of colours/sounds using your memory and
+                attention. In each round, another colour is generated and added to the sequence. The difficulty
+                increases as the game progresses, as the player's memory is increasingly challenged.
+            </p>
         </div>
     </div>
     <script src="js/script.js"></script>
