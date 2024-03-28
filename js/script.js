@@ -35,13 +35,13 @@ colorElements.forEach(function (colorElement) {
 
 /*----- functions -----*/
 function resetGame() {
-gameState = {
-  sequence: [],
-  player: [],
-  level: 0,
-  isPlayerTurn: false,
-  messageDisplay: messageDisplay
-}
+  gameState = {
+    sequence: [],
+    player: [],
+    level: 0,
+    isPlayerTurn: false,
+    messageDisplay: messageDisplay
+  }
 
 
   // sequence = [];
@@ -49,7 +49,7 @@ gameState = {
   // level = 0;
   // isPlayerTurn = false;
   // messageDisplay.innerText = "";
-  }
+}
 
 function startGame() {
   resetGame();
@@ -118,31 +118,50 @@ function flashColor(color) {
 function handleColorClick(color) {
   if (!gameState.isPlayerTurn)
     return;
-  if (color !== gameState.sequence[gameState.level]) {
-    gameOver();
-    return;
-  }
-  if (gameState.level === gameState.sequence.length - 1) {
-    gameState.messageDisplay.innerText = "You win!";
-    addColorToSequence();
-    setTimeout(function () {
-      playSequence();
-      displayLevel();
-      gameState.messageDisplay.innerText = "";
-    }, 3000);
+  const expectedColor = gameState.sequence[gameState.player.length];
+  if (color === expectedColor) {
+    gameState.player.push(color);
+    if (gameState.player.length === gameState.sequence.length) {
+      gameState.messageDisplay.innerText = "You Win!";
+      gameState.player = [];
+      gameState.level++;
+      setTimeout(function () {
+        addColorToSequence();
+        playSequence();
+        displayLevel();
+        gameState.messageDisplay.innerText = "";
+      }, 3000);
+    } else {
+      gameState.level++;
+    }
   } else {
-    gameState.level += 1;
+    gameOver();
   }
+  // if (color !== gameState.sequence[gameState.level]) {
+  //   gameOver();
+  //   return;
+  // }
+  // if (gameState.level === gameState.sequence.length - 1) {
+  //   gameState.messageDisplay.innerText = "You win!";
+  //   addColorToSequence();
+  //   setTimeout(function () {
+  //     playSequence();
+  //     displayLevel();
+  //     gameState.messageDisplay.innerText = "";
+  //   }, 3000);
+  // } else {
+  //   gameState.level += 1;
+  // }
 }
 
 function gameOver() {
   gameState.messageDisplay.style.position = "absolute";
   gameState.messageDisplay.innerText = "You lose!";
-    setTimeout(function () {
-      gameState.messageDisplay.innerText = "";
-      resetGame();
-      backToNothing();
-    }, 3000);
+  setTimeout(function () {
+    gameState.messageDisplay.innerText = "";
+    resetGame();
+    backToNothing();
+  }, 3000);
 }
 
 /*----- Next Thing -----*/
