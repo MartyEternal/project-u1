@@ -23,10 +23,6 @@ startButton.addEventListener("click", startGame);
 colorElements.forEach(function (colorElement) {
   colorElement.addEventListener("click", function () {
     handleColorClick(colorElement.id);
-  });
-});
-colorElements.forEach(function (colorElement) {
-  colorElement.addEventListener("click", function () {
     handleColorPlayer(colorElement.id);
   });
 });
@@ -52,7 +48,7 @@ function startGame() {
 
 function resizeBoard() {
   startButton.style.display = "none";
-  gameBoard.style.maxwidth = "500px";
+  gameBoard.style.maxWidth = "500px";
   colorElements.forEach(function (colorElements) {
     colorElements.style.height = "250px";
     colorElements.style.width = "250px";
@@ -68,7 +64,7 @@ function backToNothing() {
   setTimeout(function () {
     startButton.innerText = "PLAY GAME";
   }, 10000);
-  gameBoard.style.maxwidth = "";
+  gameBoard.style.maxWidth = "";
   colorElements.forEach(function (colorElements) {
     colorElements.style.height = "150px";
     colorElements.style.width = "150px";
