@@ -8,7 +8,7 @@ You will share:
 - [x] User story
 
 Necessary Deliverables
-- [ ] Your game's Title: Description of the game. Background info of the game.
+- [x] Your game's Title: Description of the game. Background info of the game.
 - [ ] Screenshots of the actual game.
 - [ ] Technologies Used: List of technologies, JS, HTML, CSS
 - [ ] Getting Started: Include link to your deployed game and instructions deemed important.
@@ -80,3 +80,31 @@ Pseudocode
 5. Define level/difficulty variable to keep track of the current level/difficulty
 6. Define playing/startGame variable to check the state of the game (started/ended/etc)
 7. Define a function: function 
+
+
+
+My Thoughts as I go
+28/03/2024:
+I'm starting this a litte late, but I'll type out what I can remember.
+The first day we started this project, we were asked to share with the class what game we chose to create. There was no mention of grading being higher or lower based on the difficulty of the coding of the game that we end up choosing (or how many games we choose to make in these next two weeks), so I went with a game from the list that I thought would be most fun to code for: Simon.
+My memory of the "Simon" game is that the coloured buttons flash, then the player has to press the coloured buttons in the same order/sequence that they flashed in. It's a fun little memory game that flashes bright colours - what isn't there to like?!
+Drawing up the wireframe was a great way to plan out what I wanted to do with my version of the Simon game. I drew up five different states of the game: 
+1. The Initial state, where the game is opened up on a browser.
+This state shows the title, a smaller main circle/buttons/board, the start button and instructions on how to play the game.
+2. The Start state, where the game is started and now ready to begin from Level 1.
+This state shows the title, the main circle has enlarged to fit more of the space, buttons have greyed out to have the buttons ready to "light up", the start button has disappeared, the instructions are still showing.
+3. The Game state, where the game is running in full.
+This state is exactly the same as the Start state. Difference is just showing what the circle would look like when the game is fully running - the button and border "lights up".
+4. The Win state, where the game has been won.
+This state shows the title, the smaller circle and start button returns. The start button's text changes to "Next Level" and text saying "You Win" fills the space inside of the circle.
+5. The Lose state, where the game has been lost.
+This state is similar to the Win state, however the start button comes back as "Play Again", the text inside of the circle says "You Lose".
+After drawing up the wireframe, we were asked to write up a user story for the game. The list of games given to us were all nice and simple; games that nearly everyone had exposure to as children and are easy enough to understand and play. This made it easier to write a user story for, as I already have experience playing the game, and understood what I wanted from mine.
+Unfortunately, I didn't fully understand what a user story was, so I searched for examples on Google to find that it's a paragraph that - according to the examples shown - had to be structured a certain way. I copy/pasted the format and filled in where I needed to.
+Then comes the show-and-tell and my understanding of a user story is challenged. Everyone else seems to have listed off what they are expecting step-by-step as their game progresses, but mine was a paragraph. Rather than just changing mine, I went and did another user story in the same way everyone else was doing it, just to have both types. Aren't I easily swayed?
+The last part of the first day of our Unit 1 project had us doing the first bits of coding.
+I remember that I spent that time writing the HTML file and the beginnings of my CSS. The HTML part was nice and easy as all I needed to do was type up tags, some text and create the buttons. CSS was a little tricky because we haven't been taught how to create shapes using CSS yet. I knew I needed to have four different elements for the circle, but I didn't know how to make these elements into the shape that I wanted them to be: quarter circles.
+I had to look up a video of how to do this. Fortunately, it only took one Google search to find it. Maybe it's because of my time as a streamer, but why do all these tutorial videos have to be 'funny'? A few minutes of the video was all I needed, but it's always good to skim through the rest of the video just in case there is valuable information in there. Nothing this time. ¯\_(ツ)_/¯
+
+The second session on Monday saw a bigger focus on coding the JS. It was finally time to make the game work ... or not. Running on my intuition and the code that I've learned so far, I started defining variables that I know would be essential: the coloured buttons, the start button, the title, the instructions. All of these things are going to be changing in style and their properties will be adjusting a lot.
+Of the things I did know I wanted to do, I didn't know just how many functions I was going to be writing up. Something that Corey mentioned on Wednesday was that I had written my code in a way that changes the variables one-by-one, have code referencing tags and properties instead of having it all written in JS. 

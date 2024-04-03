@@ -9,12 +9,7 @@ const colorElements = document.querySelectorAll(".color");
 const title = document.querySelector("h1");
 const instructions = document.getElementById("instructions");
 
-
 /*----- state variables -----*/
-// let sequence = [];
-// let player = [];
-// let level = 0;
-// let isPlayerTurn = false;
 let gameState = {
   sequence: [],
   player: [],
@@ -30,8 +25,11 @@ colorElements.forEach(function (colorElement) {
     handleColorClick(colorElement.id);
   });
 });
-
-
+colorElements.forEach(function (colorElement) {
+  colorElement.addEventListener("click", function () {
+    handleColorPlayer(colorElement.id);
+  });
+});
 
 /*----- functions -----*/
 function resetGame() {
@@ -42,13 +40,6 @@ function resetGame() {
     isPlayerTurn: false,
     messageDisplay: messageDisplay
   }
-
-
-  // sequence = [];
-  // player = [];
-  // level = 0;
-  // isPlayerTurn = false;
-  // messageDisplay.innerText = "";
 }
 
 function startGame() {
@@ -67,11 +58,16 @@ function resizeBoard() {
     colorElements.style.width = "250px";
   });
   instructions.style.display = "none";
+  title.style.position = "relative";
+  title.style.top = "-55px";
 }
 
 function backToNothing() {
   startButton.style.display = "block";
-  startButton.innerText = "Play Again";
+  startButton.innerText = "PLAY AGAIN";
+  setTimeout(function () {
+    startButton.innerText = "PLAY GAME";
+  }, 10000);
   gameBoard.style.maxwidth = "";
   colorElements.forEach(function (colorElements) {
     colorElements.style.height = "150px";
@@ -79,6 +75,7 @@ function backToNothing() {
   });
   instructions.style.display = "block";
   title.innerText = "SIMON";
+  title.style.top = "0";
 }
 
 function displayLevel() {
@@ -108,10 +105,10 @@ function playSequence() {
 
 function flashColor(color) {
   const colorElement = document.getElementById(color);
-  const originalColor = colorElement.style.backgroundColor;
-  colorElement.style.backgroundColor = 'white';
+  const originalColor = colorElement.style.opacity;
+  colorElement.style.opacity = '1';
   setTimeout(function () {
-    colorElement.style.backgroundColor = originalColor;
+    colorElement.style.opacity = originalColor;
   }, 500);
 }
 
@@ -122,7 +119,7 @@ function handleColorClick(color) {
   if (color === expectedColor) {
     gameState.player.push(color);
     if (gameState.player.length === gameState.sequence.length) {
-      gameState.messageDisplay.innerText = "You Win!";
+      gameState.messageDisplay.innerText = "GOOD JOB!";
       gameState.player = [];
       gameState.level++;
       setTimeout(function () {
@@ -131,42 +128,29 @@ function handleColorClick(color) {
         displayLevel();
         gameState.messageDisplay.innerText = "";
       }, 3000);
-    } else {
-      gameState.level++;
     }
   } else {
     gameOver();
   }
-  // if (color !== gameState.sequence[gameState.level]) {
-  //   gameOver();
-  //   return;
-  // }
-  // if (gameState.level === gameState.sequence.length - 1) {
-  //   gameState.messageDisplay.innerText = "You win!";
-  //   addColorToSequence();
-  //   setTimeout(function () {
-  //     playSequence();
-  //     displayLevel();
-  //     gameState.messageDisplay.innerText = "";
-  //   }, 3000);
-  // } else {
-  //   gameState.level += 1;
-  // }
+}
+
+function handleColorPlayer(color) {
+  if (!gameState.isPlayerTurn)
+    return;
+  const colorElement = document.getElementById(color);
+  const originalColor = colorElement.style.opacity;
+  colorElement.style.opacity = '1';
+  setTimeout(function () {
+    colorElement.style.opacity = originalColor;
+  }, 200);
 }
 
 function gameOver() {
   gameState.messageDisplay.style.position = "absolute";
-  gameState.messageDisplay.innerText = "You lose!";
+  gameState.messageDisplay.innerText = "YOU LOSE!";
   setTimeout(function () {
     gameState.messageDisplay.innerText = "";
     resetGame();
     backToNothing();
   }, 3000);
 }
-
-/*----- Next Thing -----*/
-
-/* make it so that "win/lose" only shows up after the sequence is finished. */
-/* make the "PLAY" button disappear during the round, making space for the board to enlarge, then have it return with new innerText = "Next Level" or something like that. */
-
-/* make the game start with the board fading to grey by lowering the transparency of the buttons, turning them back to 100% when they 'blink'. */

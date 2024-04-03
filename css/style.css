@@ -23,10 +23,6 @@ body {
     margin: 50px 0px 50px 0px;
 }
 
-h1 {
-    font-size: 50px;
-}
-
 #game-main {
     display: flex;
     flex-direction: column;
@@ -35,6 +31,13 @@ h1 {
     max-width: 400px;
     margin: 0px auto;
     height: 100%;
+    /* opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear; */
+}
+
+h1 {
+    font-size: 50px;
 }
 
 #game-board {
@@ -48,16 +51,17 @@ h1 {
     height: 150px;
     border-radius: 100%;
     border: 5px solid grey;
-    transition: background-color 0.3s;
+    transition: opacity 0.3s;
+    opacity: 0.6;
 }
 
 #red {
-    background-color: red;
+    background-color: tomato;
     border-top-left-radius: 100%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    border-color: red;
+    border-color: tomato;
 }
 
 #yellow {
@@ -94,9 +98,20 @@ h1 {
 }
 
 #message {
-    font-size: 100px;
+    font-size: 75px;
     position: absolute;
     align-items: center;
     max-width: 450px;
-    margin-bottom: 65px;
+    top: 180px;
 }
+
+/* @keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#game-main.fade-out {
+    animation: fadeOut 0.5s forwards;
+} */
