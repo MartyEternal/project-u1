@@ -8,6 +8,10 @@ const messageDisplay = document.getElementById("message");
 const colorElements = document.querySelectorAll(".color");
 const title = document.querySelector("h1");
 const instructions = document.getElementById("instructions");
+const sfxE1 = new Audio("SFX/E1.wav");
+const sfxC2 = new Audio("SFX/C2.wav");
+const sfxA2 = new Audio("SFX/A2.wav");
+const sfxC4 = new Audio("SFX/C4.wav");
 
 /*----- state variables -----*/
 let gameState = {
@@ -16,7 +20,14 @@ let gameState = {
   level: 0,
   isPlayerTurn: false,
   messageDisplay: messageDisplay
-}
+};
+
+const colorSounds = {
+  red: sfxE1,
+  yellow: sfxC2,
+  blue: sfxA2,
+  green: sfxC4
+};
 
 /*----- event listeners -----*/
 startButton.addEventListener("click", startGame);
@@ -102,9 +113,13 @@ function playSequence() {
 function flashColor(color) {
   const colorElement = document.getElementById(color);
   const originalColor = colorElement.style.opacity;
+  const originalBorder = colorElement.style.borderColor;
   colorElement.style.opacity = '1';
+  colorElement.style.borderColor = "rgba(212, 212, 212, 0.3)";
+  colorSounds[color].play();
   setTimeout(function () {
     colorElement.style.opacity = originalColor;
+    colorElement.style.borderColor = originalBorder;
   }, 500);
 }
 
@@ -133,11 +148,15 @@ function handleColorClick(color) {
 function handleColorPlayer(color) {
   if (!gameState.isPlayerTurn)
     return;
+  colorSounds[color].play();
   const colorElement = document.getElementById(color);
   const originalColor = colorElement.style.opacity;
+  const originalBorder = colorElement.style.borderColor;
   colorElement.style.opacity = '1';
+  colorElement.style.borderColor = "rgba(212, 212, 212, 0.3)";
   setTimeout(function () {
     colorElement.style.opacity = originalColor;
+    colorElement.style.borderColor = originalBorder;
   }, 200);
 }
 

@@ -1,4 +1,4 @@
-UNIT 1 Project - SEI
+# UNIT 1 Project - SEI
 Planning & Presentation Requirements
 Planning - Due: 25/03/2024
 You will share:
@@ -83,16 +83,29 @@ Some of my peers have opted to make designs for their games using Fimble and oth
 
 
 Getting Started:
-Link: https://github.com/MartyEternal/project-u1/tree/main
-This game is currently stored locally and not hosted on any platform. To execute, simply run the index.html file with Live Server from VSC.
+Link: [martyeternal.github.io](https://martyeternal.github.io/project-u1/)
+To execute, simply visit the website above. The game is initiated as soon as the website loads.
 
 
 
 Next Steps: Planned future enhancements (icebox items)
 The Simon memory game is a classic and is easily accessible on any platform you could think about. If I were to take the version I've created further:
 - Create multiple difficulty levels
+- Create a Hint Button with limited hints per GAME
 - Give players the option to customize the buttons with microtransactions
 - Look for sponsorship from Raid: Shadow Legends :D
+
+
+Screenshots:
+1. [Initial State: Initial game screen as you open the page](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Screenshots\01-init.png)
+
+2. [Play State: After clicking the Play button](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Screenshots\02-play.png)
+
+3. [Win State: Player wins the game by matching all the colours/tones](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Screenshots\03-win.png)
+
+4. [Lose State: Player loses the game at any point in the game](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Screenshots\04-lose.png)
+
+5. [Reset State: Game has been lost and the game brings you back to the main screen, but the Play Button innerText has changed](\\wsl.localhost\Ubuntu\home\marty\code\project-u1-personal\Screenshots\05-reset.png)
 
 
 
